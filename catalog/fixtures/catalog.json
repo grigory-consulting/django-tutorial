@@ -1,0 +1,277 @@
+[
+{
+  "model": "catalog.checklistitem",
+  "pk": 1,
+  "fields": {
+    "text": "Repo geklont",
+    "done": false
+  }
+},
+{
+  "model": "catalog.checklistitem",
+  "pk": 2,
+  "fields": {
+    "text": "Migrationen ausgefuehrt",
+    "done": false
+  }
+},
+{
+  "model": "catalog.checklistitem",
+  "pk": 3,
+  "fields": {
+    "text": "Server gestartet",
+    "done": false
+  }
+},
+{
+  "model": "catalog.checklistitem",
+  "pk": 4,
+  "fields": {
+    "text": "Tests gruen",
+    "done": false
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 1,
+  "fields": {
+    "name": "Science-Fiction"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 2,
+  "fields": {
+    "name": "Fantasy"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 3,
+  "fields": {
+    "name": "Roman"
+  }
+},
+{
+  "model": "catalog.language",
+  "pk": 1,
+  "fields": {
+    "name": "Deutsch"
+  }
+},
+{
+  "model": "catalog.language",
+  "pk": 2,
+  "fields": {
+    "name": "Englisch"
+  }
+},
+{
+  "model": "catalog.author",
+  "pk": 1,
+  "fields": {
+    "first_name": "J. R. R.",
+    "last_name": "Tolkien",
+    "date_of_birth": "1892-01-03",
+    "date_of_death": null
+  }
+},
+{
+  "model": "catalog.author",
+  "pk": 2,
+  "fields": {
+    "first_name": "Stanisław",
+    "last_name": "Lem",
+    "date_of_birth": "1921-09-12",
+    "date_of_death": null
+  }
+},
+{
+  "model": "catalog.author",
+  "pk": 3,
+  "fields": {
+    "first_name": "Ursula K.",
+    "last_name": "Le Guin",
+    "date_of_birth": "1929-10-21",
+    "date_of_death": null
+  }
+},
+{
+  "model": "catalog.author",
+  "pk": 4,
+  "fields": {
+    "first_name": "William",
+    "last_name": "Gibson",
+    "date_of_birth": null,
+    "date_of_death": null
+  }
+},
+{
+  "model": "catalog.author",
+  "pk": 5,
+  "fields": {
+    "first_name": "Aldous",
+    "last_name": "Huxley",
+    "date_of_birth": null,
+    "date_of_death": null
+  }
+},
+{
+  "model": "catalog.author",
+  "pk": 6,
+  "fields": {
+    "first_name": "Isaac",
+    "last_name": "Asimov",
+    "date_of_birth": null,
+    "date_of_death": null
+  }
+},
+{
+  "model": "catalog.author",
+  "pk": 7,
+  "fields": {
+    "first_name": "George",
+    "last_name": "Orwell",
+    "date_of_birth": null,
+    "date_of_death": null
+  }
+},
+{
+  "model": "catalog.book",
+  "pk": 1,
+  "fields": {
+    "title": "Der Hobbit",
+    "publication_year": null,
+    "author": 1,
+    "summary": "Bilbo Beutlin auf Abenteuerreise.",
+    "isbn": "9780261103283",
+    "language": 1,
+    "genre": [
+      2
+    ]
+  }
+},
+{
+  "model": "catalog.book",
+  "pk": 2,
+  "fields": {
+    "title": "Solaris",
+    "publication_year": null,
+    "author": 2,
+    "summary": "Erstkontakt mit einem Ozean-Planeten.",
+    "isbn": "9780156027601",
+    "language": 1,
+    "genre": [
+      1,
+      3
+    ]
+  }
+},
+{
+  "model": "catalog.book",
+  "pk": 3,
+  "fields": {
+    "title": "The Left Hand of Darkness",
+    "publication_year": null,
+    "author": 3,
+    "summary": "Geschlecht und Gesellschaft auf Gethen.",
+    "isbn": "9780441478125",
+    "language": 2,
+    "genre": [
+      1
+    ]
+  }
+},
+{
+  "model": "catalog.book",
+  "pk": 4,
+  "fields": {
+    "title": "Neuromancer",
+    "publication_year": null,
+    "author": 4,
+    "summary": "",
+    "isbn": "9780441569595",
+    "language": null,
+    "genre": []
+  }
+},
+{
+  "model": "catalog.book",
+  "pk": 5,
+  "fields": {
+    "title": "Schöne neue Welt",
+    "publication_year": null,
+    "author": 5,
+    "summary": "",
+    "isbn": "9783596905096",
+    "language": null,
+    "genre": []
+  }
+},
+{
+  "model": "catalog.book",
+  "pk": 6,
+  "fields": {
+    "title": "Foundation",
+    "publication_year": null,
+    "author": 6,
+    "summary": "",
+    "isbn": "9780553293357",
+    "language": null,
+    "genre": []
+  }
+},
+{
+  "model": "catalog.book",
+  "pk": 7,
+  "fields": {
+    "title": "1984",
+    "publication_year": null,
+    "author": 7,
+    "summary": "",
+    "isbn": "9780451524935",
+    "language": null,
+    "genre": []
+  }
+},
+{
+  "model": "catalog.bookinstance",
+  "pk": "0e61a478-12d6-438a-9932-e712d5003d3a",
+  "fields": {
+    "book": 3,
+    "due_back": null,
+    "borrower": null,
+    "status": "a"
+  }
+},
+{
+  "model": "catalog.bookinstance",
+  "pk": "40c2b283-4541-4efd-9cd5-1e836f26d227",
+  "fields": {
+    "book": 1,
+    "due_back": null,
+    "borrower": null,
+    "status": "m"
+  }
+},
+{
+  "model": "catalog.bookinstance",
+  "pk": "a9795ce5-9768-4ce2-8162-6bbe08f704ef",
+  "fields": {
+    "book": 1,
+    "due_back": null,
+    "borrower": null,
+    "status": "a"
+  }
+},
+{
+  "model": "catalog.bookinstance",
+  "pk": "c42b6ea9-756e-49e1-a312-3f06c2ec9ae8",
+  "fields": {
+    "book": 2,
+    "due_back": "2026-06-15",
+    "borrower": null,
+    "status": "o"
+  }
+}
+]

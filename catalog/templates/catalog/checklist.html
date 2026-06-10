@@ -1,0 +1,21 @@
+{% extends "catalog/base_generic.html" %}
+{% load static %}
+
+{% block content %}
+  <script src="{% static 'catalog/vendor/htmx.min.js' %}"></script>
+  <script src="{% static 'catalog/vendor/htmx-ext-ws.js' %}"></script>
+  <style>.done { text-decoration: line-through; color: #888; }</style>
+
+  <h1>Checkliste (Echtzeit)</h1>
+  <p>Öffnen Sie diese Seite in zwei Browser-Tabs. Ein Haken in einem Tab
+     erscheint sofort auch im anderen, ohne Neuladen.</p>
+
+  {# hx-ext="ws" + ws-connect: öffnet EINE WebSocket-Leitung für alles darin. #}
+  <div hx-ext="ws" ws-connect="/ws/checklist/">
+    <div id="list">
+      {% for item in items %}
+        {% include "catalog/_checklist_item.html" %}
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

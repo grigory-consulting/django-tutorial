@@ -1,0 +1,14 @@
+{% extends "catalog/base_generic.html" %}
+
+{% block content %}
+  <h1>Startseite der lokalen Bibliothek</h1>
+
+  <p>Willkommen in <em>LocalLibrary</em>, einer Beispielanwendung der
+     Django-Einsteigerschulung.</p>
+
+  <h2>Bestand</h2>
+  <ul>
+    <li><strong>Bücher:</strong> {{ num_books }}</li>
+    <li><strong>Autoren:</strong> {{ num_authors }}</li>
+  </ul>
+{% endblock %}

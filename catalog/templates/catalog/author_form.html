@@ -1,0 +1,14 @@
+{% extends "catalog/base_generic.html" %}
+
+{% block content %}
+  <h1>Autor anlegen</h1>
+
+  {# enctype="multipart/form-data" ist PFLICHT, sobald eine Datei hochgeladen wird. #}
+  {# Ohne dieses Attribut sendet der Browser nur den Dateinamen, nicht den Inhalt,  #}
+  {# und request.FILES bleibt leer.                                                 #}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Speichern</button>
+  </form>
+{% endblock %}

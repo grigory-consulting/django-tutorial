@@ -1,0 +1,15 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 1rem 2rem;
+}
+
+h1 {
+    color: #2b5797;
+}

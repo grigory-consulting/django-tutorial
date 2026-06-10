@@ -1,0 +1,15 @@
+{% comment %}
+Eine Checklisten-Zeile. Wird zweimal genutzt:
+- beim ersten Laden der Seite (ohne oob)
+- beim Broadcast vom Server (mit oob=True) -> HTMX ersetzt die Zeile in-place
+ws-send: bei einer Aenderung schickt HTMX die Formularfelder ueber den WebSocket.
+{% endcomment %}
+<form id="item-{{ item.id }}" ws-send hx-trigger="change"
+      {% if oob %}hx-swap-oob="true"{% endif %}>
+  <input type="hidden" name="action" value="toggle">
+  <input type="hidden" name="id" value="{{ item.id }}">
+  <label>
+    <input type="checkbox" {% if item.done %}checked{% endif %}>
+    <span class="{% if item.done %}done{% endif %}">{{ item.text }}</span>
+  </label>
+</form>

@@ -1,0 +1,12 @@
+{% extends "catalog/base_generic.html" %}
+
+{% block content %}
+  <h1>Autor gespeichert</h1>
+  <p><strong>{{ author }}</strong></p>
+  {% if author.cv %}
+    <p>Hochgeladene Datei: <a href="{{ author.cv.url }}">{{ author.cv.name }}</a></p>
+  {% else %}
+    <p>Keine Datei hochgeladen.</p>
+  {% endif %}
+  <p><a href="{% url 'author-create' %}">Noch einen anlegen</a></p>
+{% endblock %}

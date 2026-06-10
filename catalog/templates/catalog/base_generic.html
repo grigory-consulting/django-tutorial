@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  {% block title %}<title>Lokale Bibliothek</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'catalog/styles.css' %}">
+</head>
+
+<body>
+  {% block sidebar %}
+    <ul class="sidebar-nav">
+      <li><a href="{% url 'index' %}">Startseite</a></li>
+      {# Link zur Buchliste folgt später, sobald die Route 'books' existiert #}
+    </ul>
+  {% endblock %}
+
+  <main>
+    {% block content %}{% endblock %}
+    {% block pagination %}{% endblock %}
+  </main>
+</body>
+</html>
