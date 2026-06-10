@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Neue App</title>
+</head>
+<body>
+  <h1>Die App laeuft.</h1>
+  <ul>
+    {% for e in eintraege %}
+      <li>{{ e.titel }}</li>
+    {% empty %}
+      <li>Noch keine Eintraege.</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

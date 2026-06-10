@@ -1,0 +1,9 @@
+from django.test import TestCase
+
+from .models import Eintrag
+
+
+class EintragModelTests(TestCase):
+    def test_str_gibt_titel(self):
+        e = Eintrag.objects.create(titel="Beispiel")
+        self.assertEqual(str(e), "Beispiel")

@@ -1,0 +1,14 @@
+from django.db import models
+
+
+class Eintrag(models.Model):
+    """Beispiel-Modell. Passen Sie Felder und Namen an Ihre App an."""
+
+    titel = models.CharField(max_length=200)
+    erstellt_am = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-erstellt_am"]
+
+    def __str__(self):
+        return self.titel

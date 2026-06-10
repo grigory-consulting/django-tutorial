@@ -1,0 +1,8 @@
+from django.contrib import admin
+
+from .models import Eintrag
+
+
+@admin.register(Eintrag)
+class EintragAdmin(admin.ModelAdmin):
+    list_display = ("titel", "erstellt_am")

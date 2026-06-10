@@ -1,0 +1,11 @@
+from django.urls import path
+
+from . import views
+
+# Namespace "{{ app_name }}": erlaubt das Aufloesen per Name (App-Doppelpunkt-Routenname)
+# in Templates und in reverse(). Routennamen bleiben so eindeutig je App.
+app_name = "{{ app_name }}"
+
+urlpatterns = [
+    path("", views.index, name="index"),
+]
